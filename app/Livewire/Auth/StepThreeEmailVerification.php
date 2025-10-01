@@ -2,6 +2,9 @@
 
 namespace App\Livewire\Auth;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class StepThreeEmailVerification extends Component
@@ -27,7 +30,24 @@ class StepThreeEmailVerification extends Component
         $this->validate();
         $this->saveToSession();
 
-        return redirect()->route('register.success');
+        $registrationData = session()->get('registration', []);
+
+        $user = User::create([
+            'first_name' => $registrationData['first_name'] ?? null,
+            'last_name' => $registrationData['last_name'] ?? null,
+            'address' => $registrationData['address'] ?? null,
+            'email' => $registrationData['email'],
+            'password' => Hash::make($registrationData['password'] ?? ''),
+            // optionally save 'terms' field if your users table has it
+        ]);
+
+         // Log the user in
+        Auth::login($user);
+
+        // Clear the temporary registration session
+        session()->forget('registration');
+
+        return redirect()->route('dashboard');
     }
 
     public function goBack()

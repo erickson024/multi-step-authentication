@@ -10,7 +10,8 @@ class StepTwoPasswordSetup extends Component
     public $password_confirmation;
 
     protected $rules = [
-        'password' => 'required|min:8|confirmed'
+        'password' => 'required|min:8',
+        'password_confirmation' => 'required|same:password',
     ];
 
     public function mount()
