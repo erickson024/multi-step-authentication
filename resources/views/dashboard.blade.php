@@ -4,10 +4,13 @@
     @section('content')
     <div class="container vh-100 d-flex align-items-center justify-content-center">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 ">
                 <div class="shadow p-5 rounded">
                     @if(Auth::check())
-                    <p class="fw-semibold">Hello, {{ Auth::user()->first_name }}!</p>
+                 
+                        <p>Hello, <span class="fw-semibold">{{ Auth::user()->first_name }}</span>  </p>
+               
+
 
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -22,4 +25,4 @@
         </div>
     </div>
     @endsection
-</div> 
+</div>

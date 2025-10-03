@@ -42,3 +42,5 @@ class StepOnePersonalInfo extends Component
         return view('livewire.auth.step-one-personal-info');
     }
 }
+
+

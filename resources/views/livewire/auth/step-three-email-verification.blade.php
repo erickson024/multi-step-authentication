@@ -5,8 +5,8 @@
         <div class="row gx-3 mb-4">
             <div class="col-12 mb-3">
                 <div class="form-floating">
-                    <input type="email" class="form-control shadow-none" wire:model="email" placeholder="Email">
-                    <label>email</label>
+                    <input type="email" class="form-control shadow-none" wire:model="email" placeholder="Email" required>
+                    <label>Email</label>
                     @error('email') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
             </div>

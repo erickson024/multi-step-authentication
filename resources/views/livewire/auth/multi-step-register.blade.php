@@ -19,7 +19,6 @@
             </div>
         </div>
           
-
         <!-- Form Card -->
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-5">
@@ -55,5 +54,3 @@
         }
     }
 </script>
-
-

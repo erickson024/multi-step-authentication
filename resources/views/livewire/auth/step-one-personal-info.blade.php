@@ -9,9 +9,10 @@
                         type="text"
                         class="form-control shadow-sm "
                         wire:model="first_name"
-                        placeholder="firstname">
+                        placeholder="firstname"
+                        required>
                     <label>Firstname</label>
-                     @error('first_name') <small class="text-danger">{{ $message }}</small> @enderror
+                    @error('first_name') <small class="text-danger">{{ $message }}</small> @enderror
 
                 </div>
             </div>
@@ -22,7 +23,8 @@
                         type="text"
                         class="form-control shadow-sm "
                         wire:model="last_name"
-                        placeholder="lastname">
+                        placeholder="lastname"
+                        required>
                     <label>Lastname</label>
                     @error('last_name') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
@@ -34,14 +36,13 @@
                         type="text"
                         class="form-control shadow-sm "
                         wire:model="address"
-                        placeholder="Address">
+                        placeholder="Address"
+                        required>
                     <label>Address</label>
                     @error('address') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
             </div>
-
         </div>
-
 
         <button
             type="submit"
@@ -53,9 +54,9 @@
             <span wire:loading wire:target="submit">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             </span>
-
         </button>
     </form>
 </div>
 
-</div>
+
+

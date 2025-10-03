@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class MultiStepRegister extends Component
 {
+    
     public $currentStep = 1;
 
     protected $listeners = [
