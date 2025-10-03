@@ -5,6 +5,7 @@ namespace App\Livewire\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
 use Livewire\Component;
 
 class StepThreeEmailVerification extends Component
@@ -13,7 +14,7 @@ class StepThreeEmailVerification extends Component
     public $terms = false;
 
     protected $rules = [
-        'email' => 'required|email|max:255',
+        'email' => 'required|email|max:255|unique:users,email',
         'terms' => 'accepted', // must be checked
     ];
 
@@ -40,14 +41,17 @@ class StepThreeEmailVerification extends Component
             'password' => Hash::make($registrationData['password'] ?? ''),
             // optionally save 'terms' field if your users table has it
         ]);
-
+        
+       
          // Log the user in
         Auth::login($user);
+
+        event(new Registered($user));
 
         // Clear the temporary registration session
         session()->forget('registration');
 
-        return redirect()->route('dashboard');
+        return redirect()->route('verification.notice');
     }
 
     public function goBack()
