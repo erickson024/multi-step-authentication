@@ -18,10 +18,12 @@
                 </div>
             </div>
         </div>
+          
 
         <!-- Form Card -->
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-5">
+               
                 <div class="border p-4 rounded-4 shadow form-card">
                     @if($currentStep === 1)
                     <livewire:auth.step-one-personal-info />
@@ -35,3 +37,23 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    function togglePassword(fieldId, btn) {
+        const input = document.getElementById(fieldId);
+        const icon = btn.querySelector('i');
+
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.remove("bi-eye");
+            icon.classList.add("bi-eye-slash");
+        } else {
+            input.type = "password";
+            icon.classList.remove("bi-eye-slash");
+            icon.classList.add("bi-eye");
+        }
+    }
+</script>
+
+
