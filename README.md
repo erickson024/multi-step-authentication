@@ -7,6 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<p align="center">
+  <img src="public/images/1.png" width="45%" alt="pic1">
+  <img src="public/images/2.png" width="45%" alt="pic2">
+</p>
+
+<p align="center">
+  <img src="public/images/3.png" width="45%" alt="pic3">
+  <img src="public/images/4.png" width="45%" alt="pic4">
+</p>
+
 ## About Laravel Livewire Multi-Step Authentication
 
 The Multi-Step Authentication System is implemented using Laravel Livewire, which 
