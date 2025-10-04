@@ -47,7 +47,7 @@ class StepTwoPasswordSetup extends Component
         $this->validate();
 
 
-        if ($this->strengthScore < 3) {
+        if ($this->strengthScore < 4) {
             $this->addError('password', 'Password is too weak. Please make it stronger.');
             return;
         }
