@@ -11,7 +11,7 @@
 
 The Multi-Step Authentication System is implemented using Laravel Livewire, which 
 allows for a dynamic, component-based registration flow without full-page reloads. 
-The system is divided int-one parent component and three child components, each 
+The system is divided into one parent component and three child components, each 
 representing a step in the registration process.
 
 
@@ -84,27 +84,7 @@ content-center.
 - Progress bars indicate the user’s registration progress visually. 
 - Password visibility toggle and strength meter enhance usability. 
 
-### Steps Overview
-1. **Personal Information**
-   - User provides: First Name, Last Name, and Address.
-   - Data is validated before moving to the next step.
-
-2. **Password Setup**
-   - User sets their account password.
-   - Passwords are validated for strength and confirmed.
-
-3. **Email Verification & Terms Acceptance**
-   - User verifies their email via a verification link.
-   - User accepts the Terms of Service and Privacy Policy.
-
-### Implementation
-- Built using **Laravel Livewire**, allowing a smooth, interactive step-by-step registration.
-- Each step is handled as a separate Livewire component.
-- Data is temporarily stored until the process is complete, preventing partial registration.
-- Final account creation occurs only after all steps are successfully completed.
-
-### Benefits
-- Cleaner user experience.
-- Reduces form errors.
-- Ensures important steps (like email verification) are not skipped.
-
+### Acknowledgment  
+- This system documentation was developed with the assistance of ChatGPT (GPT-5) 
+- by OpenAI, which provided guidance in structuring the system architecture, 
+- explaining code logic, and improving documentation clarity. 
