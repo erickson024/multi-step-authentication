@@ -15,6 +15,9 @@ The system is divided into one parent component and three child components, each
 representing a step in the registration process.
 
 
+### Workflow
+<img src="public/images/workflow.png" width="400" alt="workflow">
+
 ## Architecture 
 ### Parent Component: MultiStepRegister 
 **File Path:**
